@@ -254,7 +254,7 @@ main {
   height: 100vh;
   position: absolute;
   top: 200%;
-  left: 30%;;
+  left: 30%;
 }
 
 #projects h2 {
@@ -267,31 +267,88 @@ main {
 .project-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;  
-  margin-top: 30px;
+  margin-top: 30px;;
 }
 
-.pulseone, .sky-view, .portfolio{
+.pulseone, .sky-view, .portfolio, .pokedev{
   width: 280px;
   height: 330px;
   background:#770e7c;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.3s;
   color: #FFF;
+  overflow: hidden;
 }
 
-.pulseone:hover, .sky-view:hover, .portfolio:hover{
+.pulseone:hover, .sky-view:hover, .portfolio:hover, .pokedev:hover{
   transform: scale(1.08);
   transition: 0.3s;
+}
+
+.pulseone{
+  background: url("./img/pulseone.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sky-view{
+  background: url("./img/sky-view.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.pokedev{
+  background: url("./img/pokedev.jpg");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.info-project {
+  background: #770e7c;
+  padding-top: 1px;
+  visibility: hidden;
+  transform: translateY(300px);
+  height: 500px;
+  transition: 0.4s;
+}
+
+.info-project h3, p{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.pulseone:hover .info-project{
+  visibility: visible;
+  transform: translateY(0px);
+  border-radius: 10px;
+}
+
+.sky-view:hover .info-project{
+  visibility: visible;
+  transform: translateY(0px);
+  border-radius: 10px;
+}
+
+.pokedev:hover .info-project{
+  visibility: visible;
+  transform: translateY(0px);
+  border-radius: 10px;
+}
+
+.links-project span{
+  font-size: 40px;
+  margin: 0 20px;
 }
 
 /* skills */
 #skills {
   height: 100vh;
   position: absolute;
-  top: 300%;
+  top: 340%;
   left: 30%;
 }
 
@@ -339,10 +396,8 @@ main {
   color: #3f4b9b;
 }
 
-
-
 .html:hover, .css:hover, .javascript:hover, .ui:hover, .ux:hover{
-  transform: scale(1.03);
+  transform: scale(1.04);
   transition: 0.3s;
 }
 
